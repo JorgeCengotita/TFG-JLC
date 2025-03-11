@@ -1,33 +1,20 @@
-const swiper = new Swiper('.swiper-container', {
-    // Hacer que el slider sea infinito
-    loop: true,
-    
-    // Configurar efecto fade o cualquier otro efecto que se aproxime al estilo deseado
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-
-    // Activar el autoplay
-    autoplay: {
-      delay: 5000,
-    },
-
-    // Configuración de parallax
-    speed: 1000,
-
-    // Botones de navegación
-    navigation: {
+// Inicializar Swiper
+var swiper = new Swiper('#newsliderid', {
+    slidesPerView: 3,       // Mostrar 3 diapositivas a la vez
+    spaceBetween: 10,        // Espacio entre las diapositivas (ajústalo si es necesario)
+    loop: true,              // Habilitar el bucle
+    centeredSlides: true,    // Asegurarnos de que la diapositiva activa esté siempre en el centro
+    navigation: {            // Botones de navegación
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    // Paginación (opcional)
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    // Para usar parallax, asegúrate de activarlo:
-    parallax: true,
-});
+    breakpoints: {
+      768: {
+        slidesPerView: 3,    // En pantallas grandes mostrar 3 diapositivas
+      },
+      480: {
+        slidesPerView: 1,    // En pantallas pequeñas mostrar 1 diapositiva
+      }
+    }
+  });
+  
