@@ -1,7 +1,7 @@
 // Inicializar Swiper
 var swiper = new Swiper('#newsliderid', {
     slidesPerView: 3,       // Mostrar 3 diapositivas a la vez
-    spaceBetween: 10,        // Espacio entre las diapositivas (ajústalo si es necesario)
+    spaceBetween: 0,        // Espacio entre las diapositivas (ajústalo si es necesario)
     loop: true,              // Habilitar el bucle
     centeredSlides: true,    // Asegurarnos de que la diapositiva activa esté siempre en el centro
     navigation: {            // Botones de navegación
@@ -17,4 +17,5 @@ var swiper = new Swiper('#newsliderid', {
       }
     }
   });
+  
   
