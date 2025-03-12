@@ -60,3 +60,67 @@
 .swiper-slide:not(.swiper-slide-active) .slide-img#slide-img3 { filter: grayscale(100%); }
 .swiper-slide:not(.swiper-slide-active) .slide-img#slide-img4 { filter: grayscale(100%); }
 
+
+/* BOTONES SWIPER */
+
+.swiper-button-prev{
+    transform: translate(505px, -100px);
+}
+
+.swiper-button-next {
+    transform: translate(-505px, -100px);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+}
+
+/* Botones de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 60px;                   /* Tamaño del círculo */
+  height: 60px;
+  border-radius: 50%;            /* Círculo */
+  background-color: #000;        /* Fondo negro */
+  background-repeat: no-repeat;
+  background-position: -13px -3px;
+  background-size: 190px 170px;    /* Ajusta el tamaño de la flecha */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.swiper-button-next{
+    background-image: url('/Aplicación/Front/Img/arrownext.svg'); /* Imagen de flecha dorada */
+}
+
+.swiper-button-prev{
+    background-image: url('/Aplicación/Front/Img/arrowprev.svg'); /* Imagen de flecha dorada */
+}
+
+.swiper-button-prev:hover::before,
+.swiper-button-next:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: inherit;
+    border-radius: 50%;
+}
+
+
+.swiper-button-next:hover::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    right: 2px;
+    bottom: -2px;
+    /* background: inherit; */
+    border-radius: 50%;
+}
+
+
+
