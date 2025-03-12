@@ -5,6 +5,8 @@
 	text-align: center;
 	border-top: 2px solid #FFD700;
 	font-family: 'Cinzel', serif;
+	align-self: baseline;
+	width: 100%;
 }
 
 .footer-content {

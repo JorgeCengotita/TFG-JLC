@@ -7,7 +7,7 @@ body, ul, li {
 .header-container {
     display: flex;
     align-items: center;
-    background-color: #0A0A0A;
+    background-color: #111111;
     color: white;
     padding: 10px 20px;
     border-bottom: 2px solid #FFD700;

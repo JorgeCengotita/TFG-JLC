@@ -1,3 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-slider {
+    flex: 1;
+  }
+  
 /* Contenedor del swiper */
 .swiper-container {
     height: 600px;   /* Ajusta la altura que necesites */
@@ -26,10 +37,11 @@
     filter: grayscale(100%); /* Blanco y negro por defecto */
 }
 
-/* Las diapositivas inactivas tendrán el filtro blanco y negro */
+/* Las diapositivas inactivas tendrán el filtro blanco y negro con brillo y contraste ajustados */
 .swiper-slide:not(.swiper-slide-active) .slide-img {
-    filter: grayscale(100%);  /* Blanco y negro para las inactivas */
+    filter: grayscale(100%) brightness(0.3) !important;
 }
+
 
 /* Cuando la diapositiva se activa, la imagen vuelve a su tamaño original, se mueve hacia arriba y cambia a color */
 .swiper-slide.swiper-slide-active .slide-img {
@@ -79,10 +91,10 @@
 /* Botones de navegación */
 .swiper-button-next,
 .swiper-button-prev {
-  width: 60px;                   /* Tamaño del círculo */
+  width: 60px;
   height: 60px;
-  border-radius: 50%;            /* Círculo */
-  background-color: #000;        /* Fondo negro */
+  border-radius: 50%;
+  background-color: #0F0F0F;
   background-repeat: no-repeat;
   background-position: -13px -3px;
   background-size: 190px 170px;    /* Ajusta el tamaño de la flecha */
@@ -118,9 +130,89 @@
     left: 2px;
     right: 2px;
     bottom: -2px;
-    /* background: inherit; */
     border-radius: 50%;
 }
 
 
+/*CONTENIDO SLIDES*/
 
+.slide-img{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Cinzel', serif;
+    color: white;
+}
+
+/* .slide-title{
+    background-color: #0E1114;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.slide-subtitle{
+    font-size: 15px;
+    font-weight: 300;
+} */
+
+/* Contenedor para el título y subtítulo */
+.slide-text-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(184, 155, 94, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* Título principal */
+.slide-title {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b89b5e;
+    text-shadow: 2px 2px 6px rgba(184, 155, 94, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/* Subtítulo */
+.slide-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: #8c7a58;
+    text-shadow: 1px 1px 4px rgba(140, 122, 88, 0.6);
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* BOTÓN ACCEDER SLIDES */
+.slide-button {
+    background: linear-gradient(135deg, #c8aa6e, #8b6b30, #c8aa6e);
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: 2px solid #c8aa6e;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(200, 170, 110, 0.8);
+    margin: 8px;
+}
+
+.slide-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Efecto al pasar el mouse */
+.slide-button:hover {
+    background: linear-gradient(135deg, #d4af6a, #a47e3b, #d4af6a);
+    box-shadow: 0 0 15px rgba(255, 223, 110, 0.9);
+    transform: scale(1.05);
+}
